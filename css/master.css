@@ -1,0 +1,241 @@
+/* 전 항목 공통 */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+    scroll-behavior: smooth; /* 스크롤을 부드럽게 만듭니다. */
+}
+
+/* 메뉴바 */
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.menubar{
+    max-width: 1700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    padding-top: 71px;
+    position: relative;
+    transition: 0.7s;
+}
+.logo>img{
+    width: 133px;
+    height: 56px;
+    object-fit: contain;
+}
+.logo.checked{
+    filter: invert(100%);
+}
+.m_button_c{
+    width: 35px;
+    height: 35px;
+    margin-top: 80px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #1A1A1A;
+    transition: 0.2s;
+}
+.m_button_c:hover{
+    width: 67px;
+    border-radius: 18px;
+    background-color: #1A1A1A;
+}
+.m_button{
+    width: 35px;
+    height: 35px;
+    background-color: #1A1A1A;
+    border-radius: 5px;
+    display: flex;
+}
+.m_line_1{
+    width: 22px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 7px;
+    transition: 0.3s;
+}
+.m_line_2{
+    width: 22px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 21px;
+    margin-left: 7px;
+    transition: 0.3s;
+}
+.m_line_1.checked{
+    width: 24px;
+    margin-top: 15px;
+    transform: rotate( 45deg );
+}
+.m_line_2.checked{
+    width: 24px;
+    margin-top: 15px;
+    transform: rotate( -45deg );
+}
+
+/* 클릭 후 나타나는 메뉴바 */
+.menu_c{
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+    transition: 0.4s;
+}
+.menu_c.checked{
+    max-width: 100%;
+}
+.click_menu{
+    width: 0;
+    height: 0;
+    background-color: #1A1A1A;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: width 0.4s ease, height 0.4s ease;
+    transform: translate(0px, 80px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: 0.4s;
+    border-radius: 200px;
+}
+.click_menu.checked{
+    width: 100%;
+    height: 287px;
+    transform: translate(0px, 0px);
+    border-radius: 0px;
+}
+.m_list{
+    max-width: 700px;
+    width: 95%;
+    height: 40px;
+    margin-top: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+.m_list.checked{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.7s;
+}
+.m_list>p{
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0px 20px 0px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.m_list > p:hover {
+    color: #1A1A1A;
+    background-color: #fff;
+}
+.click_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+.click_bg.checked{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+}
+.m_text{
+    width: 100%;
+    visibility: hidden;
+    transition: 0.2s;
+    opacity: 0;
+}
+.m_text.checked{
+    visibility: visible;
+    transition: 0.4s;
+    opacity: 1;
+}
+.m_text>p{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+/* 메인배너 */
+.main_b{
+    max-width: 1700px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+.banner{
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 0;
+    position: absolute;
+    opacity: 1;
+    animation: fadeIn 1.2s ease-in-out;
+    transition: width 1.2s ease, height 1.2s ease;
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+@keyframes fadeIn {
+    from {
+      width: 0;
+      height: 0;
+    }
+    to {
+      width: 100%;
+      height: 80vh;
+    }
+  }
+
+/* 콘텐츠_1 */
+.content_1{
+    width: 1700px;
+    height: 2000px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}

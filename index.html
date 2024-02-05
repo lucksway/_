@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대통키획</title>
+  <link rel="stylesheet" href="css/master.css">
+  <script src="js/scroll.js" defer></script>
+  <script src="js/main.js" defer></script>
+  
+</head>
+
+<body>
+  <script>
+    window.addEventListener('beforeunload', function() {
+      window.scrollTo(0, 0); // 페이지가 새로고침되기 전에 스크롤 위치를 최상단으로 이동
+    });
+  </script>
+
+  <!-- 메뉴바 -->
+  <nav>
+    <div class="menubar">
+      <div class="logo" id="logo_1">
+        <img src="img/main_img/logo.png">
+      </div>
+      <div class="m_button_c" id="toggleButton">
+        <div class="m_button">
+          <div class="m_line_1" id="mline1"></div>
+          <div class="m_line_2" id="mline2"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 메인배너 -->
+  <div class="main_b">
+    <div class="banner" id="banner">
+      <video autoplay muted loop>
+        <source src="img/main_img/main_banner.mp4" type="video/mp4">
+    </div>
+  </div>
+
+  <!-- 클릭 후 나타나는 메뉴바 -->
+  <div class="menu_c" id="menuc">
+    <div class="click_menu" id="clickmenu">
+      <div class="m_list" id="mlist">
+        <p>사보</p>
+        <p>웹진</p>
+        <p>브로슈어</p>
+        <p>카탈로그</p>
+        <p>Etc.</p>
+        <p>사사</p>
+        <p>Gangnam office</p>
+      </div>
+      <div class="m_text" id="mtext">
+        <p>
+          온오프라인을 결합할 수 있는 새로운 생각과 실험으로 세상과 공감하는
+          또 다른 가치를 만들어 갈 것입니다.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="click_bg" id="clickbg"></div>
+
+  <!-- 콘텐츠_1 -->
+  <div class="content_1">
+    
+  </div>
+
+</body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</html>
