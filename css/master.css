@@ -234,8 +234,16 @@ video{
 
 /* 콘텐츠_1 */
 .content_1{
-    width: 1700px;
-    height: 2000px;
-    background-color: aliceblue;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 190px;
+    margin-bottom: 190px;
+}
+
+/* 푸터 */
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #1A1A1A;
 }
