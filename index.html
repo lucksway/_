@@ -7,13 +7,18 @@
   <link rel="stylesheet" href="css/master.css">
   <script src="js/scroll.js" defer></script>
   <script src="js/main.js" defer></script>
-  
+  <script>
+    window.onload = function() {
+      window.scrollTo(0, 0);
+    };
+  </script>
 </head>
 
 <body>
+  <!-- 새로고침시 최상단으로 이동 -->
   <script>
     window.addEventListener('beforeunload', function() {
-      window.scrollTo(0, 0); // 페이지가 새로고침되기 전에 스크롤 위치를 최상단으로 이동
+      window.scrollTo(0, 0);
     });
   </script>
 
